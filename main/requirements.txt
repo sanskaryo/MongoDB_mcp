@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+mcp
+fastmcp
+langgraph
+langchain-anthropic
+pymongo
+pydantic
+matplotlib
+seaborn
+python-dotenv
+pandas
