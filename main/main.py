@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import List, Optional
 import uvicorn
 from agent import create_agent
-from mcp_server import mcp # Importing directly for local development simplicity
+from mcp_server import mcp 
 from langchain_core.messages import HumanMessage, AIMessage
 from fastapi.middleware.cors import CORSMiddleware
 
