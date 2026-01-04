@@ -11,3 +11,25 @@ seaborn
 python-dotenv
 pandas
 
+
+mcp==1.24.0
+langchain-mcp-adapters==0.2.1
+pymongo==4.8.0
+
+
+langgraph==0.2.57
+langchain==0.3.13
+langchain-groq==0.2.14
+langchain-openai==0.2.13
+langchain-anthropic==0.3.3
+
+fastapi==0.115.6
+uvicorn==0.32.1
+pydantic==2.10.3
+matplotlib==3.9.3
+seaborn==0.13.2
+pandas==2.2.3
+python-dotenv==1.0.1
+httpx==0.28.1
+requests==2.32.3
+typing-extensions==4.12.2
