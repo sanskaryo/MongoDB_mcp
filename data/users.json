@@ -1,0 +1,151 @@
+[
+  {
+    "_id": "staff_001",
+    "user_id": "staff_001",
+    "name": "Peyton Davis",
+    "role": "chef",
+    "email": "peyton.davis66@example.com",
+    "hire_date": "2025-08-27",
+    "active": true,
+    "permissions": [
+      "order_management",
+      "menu_updates"
+    ]
+  },
+  {
+    "_id": "staff_002",
+    "user_id": "staff_002",
+    "name": "Harper Clark",
+    "role": "chef",
+    "email": "harper.clark48@dinetown.io",
+    "hire_date": "2025-07-05",
+    "active": true,
+    "permissions": [
+      "order_management",
+      "menu_updates"
+    ]
+  },
+  {
+    "_id": "staff_003",
+    "user_id": "staff_003",
+    "name": "Jamie Harris",
+    "role": "delivery",
+    "email": "jamie.harris54@dinetown.io",
+    "hire_date": "2025-07-10",
+    "active": true,
+    "permissions": [
+      "deliveries"
+    ]
+  },
+  {
+    "_id": "staff_004",
+    "user_id": "staff_004",
+    "name": "Kennedy Harris",
+    "role": "chef",
+    "email": "kennedy.harris42@dinetown.io",
+    "hire_date": "2025-06-20",
+    "active": true,
+    "permissions": [
+      "order_management",
+      "menu_updates"
+    ]
+  },
+  {
+    "_id": "staff_005",
+    "user_id": "staff_005",
+    "name": "Avery Walker",
+    "role": "cashier",
+    "email": "avery.walker95@dinetown.io",
+    "hire_date": "2024-06-30",
+    "active": true,
+    "permissions": [
+      "payments",
+      "order_management"
+    ]
+  },
+  {
+    "_id": "staff_006",
+    "user_id": "staff_006",
+    "name": "Riley Johnson",
+    "role": "cashier",
+    "email": "riley.johnson61@dinetown.io",
+    "hire_date": "2025-07-02",
+    "active": true,
+    "permissions": [
+      "payments",
+      "order_management"
+    ]
+  },
+  {
+    "_id": "staff_007",
+    "user_id": "staff_007",
+    "name": "Quinn White",
+    "role": "delivery",
+    "email": "quinn.white28@dinetown.io",
+    "hire_date": "2024-05-30",
+    "active": true,
+    "permissions": [
+      "deliveries"
+    ]
+  },
+  {
+    "_id": "staff_008",
+    "user_id": "staff_008",
+    "name": "Rowan Thomas",
+    "role": "server",
+    "email": "rowan.thomas62@dinetown.io",
+    "hire_date": "2024-09-18",
+    "active": true,
+    "permissions": [
+      "order_management"
+    ]
+  },
+  {
+    "_id": "staff_009",
+    "user_id": "staff_009",
+    "name": "Sawyer White",
+    "role": "delivery",
+    "email": "sawyer.white61@dinetown.io",
+    "hire_date": "2024-02-21",
+    "active": true,
+    "permissions": [
+      "deliveries"
+    ]
+  },
+  {
+    "_id": "staff_010",
+    "user_id": "staff_010",
+    "name": "Harper White",
+    "role": "server",
+    "email": "harper.white99@dinetown.io",
+    "hire_date": "2024-02-20",
+    "active": true,
+    "permissions": [
+      "order_management"
+    ]
+  },
+  {
+    "_id": "staff_011",
+    "user_id": "staff_011",
+    "name": "Riley Jackson",
+    "role": "delivery",
+    "email": "riley.jackson15@mail.com",
+    "hire_date": "2024-06-16",
+    "active": true,
+    "permissions": [
+      "deliveries"
+    ]
+  },
+  {
+    "_id": "staff_012",
+    "user_id": "staff_012",
+    "name": "Casey Jackson",
+    "role": "server",
+    "email": "casey.jackson91@dinetown.io",
+    "hire_date": "2024-10-26",
+    "active": true,
+    "permissions": [
+      "order_management"
+    ]
+  }
+]

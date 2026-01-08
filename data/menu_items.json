@@ -1,0 +1,333 @@
+[
+  {
+    "_id": "menu_001",
+    "item_id": "menu_001",
+    "name": "Garlic Bread",
+    "category": "starters",
+    "price": 6.5,
+    "cost": 2.1,
+    "description": "Signature garlic bread prepared daily.",
+    "availability": true,
+    "allergens": [
+      "soy",
+      "nuts"
+    ],
+    "preparation_time": 29
+  },
+  {
+    "_id": "menu_002",
+    "item_id": "menu_002",
+    "name": "Bruschetta",
+    "category": "starters",
+    "price": 7.2,
+    "cost": 2.6,
+    "description": "Signature bruschetta prepared daily.",
+    "availability": true,
+    "allergens": [],
+    "preparation_time": 9
+  },
+  {
+    "_id": "menu_003",
+    "item_id": "menu_003",
+    "name": "Stuffed Mushrooms",
+    "category": "starters",
+    "price": 8.0,
+    "cost": 3.0,
+    "description": "Signature stuffed mushrooms prepared daily.",
+    "availability": true,
+    "allergens": [
+      "soy"
+    ],
+    "preparation_time": 9
+  },
+  {
+    "_id": "menu_004",
+    "item_id": "menu_004",
+    "name": "Loaded Nachos",
+    "category": "starters",
+    "price": 9.5,
+    "cost": 3.8,
+    "description": "Signature loaded nachos prepared daily.",
+    "availability": true,
+    "allergens": [
+      "nuts",
+      "dairy"
+    ],
+    "preparation_time": 12
+  },
+  {
+    "_id": "menu_005",
+    "item_id": "menu_005",
+    "name": "Margherita Pizza",
+    "category": "mains",
+    "price": 14.0,
+    "cost": 5.2,
+    "description": "Signature margherita pizza prepared daily.",
+    "availability": true,
+    "allergens": [],
+    "preparation_time": 16
+  },
+  {
+    "_id": "menu_006",
+    "item_id": "menu_006",
+    "name": "BBQ Chicken Pizza",
+    "category": "mains",
+    "price": 16.5,
+    "cost": 6.1,
+    "description": "Signature bbq chicken pizza prepared daily.",
+    "availability": true,
+    "allergens": [
+      "dairy",
+      "soy"
+    ],
+    "preparation_time": 22
+  },
+  {
+    "_id": "menu_007",
+    "item_id": "menu_007",
+    "name": "Penne Alfredo",
+    "category": "mains",
+    "price": 15.0,
+    "cost": 4.9,
+    "description": "Signature penne alfredo prepared daily.",
+    "availability": true,
+    "allergens": [
+      "soy"
+    ],
+    "preparation_time": 30
+  },
+  {
+    "_id": "menu_008",
+    "item_id": "menu_008",
+    "name": "Veggie Burger",
+    "category": "mains",
+    "price": 12.5,
+    "cost": 4.1,
+    "description": "Signature veggie burger prepared daily.",
+    "availability": true,
+    "allergens": [
+      "dairy"
+    ],
+    "preparation_time": 10
+  },
+  {
+    "_id": "menu_009",
+    "item_id": "menu_009",
+    "name": "Grilled Salmon",
+    "category": "mains",
+    "price": 21.0,
+    "cost": 9.0,
+    "description": "Signature grilled salmon prepared daily.",
+    "availability": false,
+    "allergens": [
+      "nuts"
+    ],
+    "preparation_time": 11
+  },
+  {
+    "_id": "menu_010",
+    "item_id": "menu_010",
+    "name": "Ribeye Steak",
+    "category": "mains",
+    "price": 28.0,
+    "cost": 12.2,
+    "description": "Signature ribeye steak prepared daily.",
+    "availability": true,
+    "allergens": [
+      "soy",
+      "dairy"
+    ],
+    "preparation_time": 10
+  },
+  {
+    "_id": "menu_011",
+    "item_id": "menu_011",
+    "name": "Tiramisu",
+    "category": "desserts",
+    "price": 7.0,
+    "cost": 2.5,
+    "description": "Signature tiramisu prepared daily.",
+    "availability": true,
+    "allergens": [
+      "gluten"
+    ],
+    "preparation_time": 18
+  },
+  {
+    "_id": "menu_012",
+    "item_id": "menu_012",
+    "name": "Cheesecake",
+    "category": "desserts",
+    "price": 7.5,
+    "cost": 2.8,
+    "description": "Signature cheesecake prepared daily.",
+    "availability": true,
+    "allergens": [
+      "dairy"
+    ],
+    "preparation_time": 26
+  },
+  {
+    "_id": "menu_013",
+    "item_id": "menu_013",
+    "name": "Chocolate Lava Cake",
+    "category": "desserts",
+    "price": 8.5,
+    "cost": 3.3,
+    "description": "Signature chocolate lava cake prepared daily.",
+    "availability": true,
+    "allergens": [],
+    "preparation_time": 19
+  },
+  {
+    "_id": "menu_014",
+    "item_id": "menu_014",
+    "name": "Fresh Lime Soda",
+    "category": "beverages",
+    "price": 4.5,
+    "cost": 1.0,
+    "description": "Signature fresh lime soda prepared daily.",
+    "availability": true,
+    "allergens": [
+      "dairy",
+      "gluten"
+    ],
+    "preparation_time": 22
+  },
+  {
+    "_id": "menu_015",
+    "item_id": "menu_015",
+    "name": "Iced Tea",
+    "category": "beverages",
+    "price": 4.0,
+    "cost": 1.2,
+    "description": "Signature iced tea prepared daily.",
+    "availability": true,
+    "allergens": [
+      "nuts",
+      "soy"
+    ],
+    "preparation_time": 23
+  },
+  {
+    "_id": "menu_016",
+    "item_id": "menu_016",
+    "name": "Craft Coffee",
+    "category": "beverages",
+    "price": 5.5,
+    "cost": 1.6,
+    "description": "Signature craft coffee prepared daily.",
+    "availability": true,
+    "allergens": [
+      "nuts"
+    ],
+    "preparation_time": 21
+  },
+  {
+    "_id": "menu_017",
+    "item_id": "menu_017",
+    "name": "Orange Juice",
+    "category": "beverages",
+    "price": 4.8,
+    "cost": 1.3,
+    "description": "Signature orange juice prepared daily.",
+    "availability": true,
+    "allergens": [
+      "dairy"
+    ],
+    "preparation_time": 27
+  },
+  {
+    "_id": "menu_018",
+    "item_id": "menu_018",
+    "name": "Mocktail",
+    "category": "beverages",
+    "price": 6.5,
+    "cost": 2.0,
+    "description": "Signature mocktail prepared daily.",
+    "availability": true,
+    "allergens": [
+      "dairy"
+    ],
+    "preparation_time": 17
+  },
+  {
+    "_id": "menu_019",
+    "item_id": "menu_019",
+    "name": "Ribeye Steak (Seasonal)",
+    "category": "mains",
+    "price": 26.7,
+    "cost": 13.68,
+    "description": "Signature ribeye steak (seasonal) prepared daily.",
+    "availability": true,
+    "allergens": [],
+    "preparation_time": 18
+  },
+  {
+    "_id": "menu_020",
+    "item_id": "menu_020",
+    "name": "Garlic Bread (Chef Special)",
+    "category": "starters",
+    "price": 7.42,
+    "cost": 3.27,
+    "description": "Signature garlic bread (chef special) prepared daily.",
+    "availability": true,
+    "allergens": [
+      "nuts"
+    ],
+    "preparation_time": 26
+  },
+  {
+    "_id": "menu_021",
+    "item_id": "menu_021",
+    "name": "Garlic Bread (Chef Special) (XL)",
+    "category": "starters",
+    "price": 6.35,
+    "cost": 4.47,
+    "description": "Signature garlic bread (chef special) (xl) prepared daily.",
+    "availability": true,
+    "allergens": [
+      "nuts"
+    ],
+    "preparation_time": 16
+  },
+  {
+    "_id": "menu_022",
+    "item_id": "menu_022",
+    "name": "Orange Juice (Seasonal)",
+    "category": "beverages",
+    "price": 4.66,
+    "cost": 1.6,
+    "description": "Signature orange juice (seasonal) prepared daily.",
+    "availability": true,
+    "allergens": [],
+    "preparation_time": 20
+  },
+  {
+    "_id": "menu_023",
+    "item_id": "menu_023",
+    "name": "Garlic Bread (Chef Special) (XL) (XL)",
+    "category": "starters",
+    "price": 4.9,
+    "cost": 5.53,
+    "description": "Signature garlic bread (chef special) (xl) (xl) prepared daily.",
+    "availability": true,
+    "allergens": [],
+    "preparation_time": 30
+  },
+  {
+    "_id": "menu_024",
+    "item_id": "menu_024",
+    "name": "Grilled Salmon (Chef Special)",
+    "category": "mains",
+    "price": 19.82,
+    "cost": 8.39,
+    "description": "Signature grilled salmon (chef special) prepared daily.",
+    "availability": true,
+    "allergens": [
+      "gluten",
+      "nuts"
+    ],
+    "preparation_time": 14
+  }
+]
