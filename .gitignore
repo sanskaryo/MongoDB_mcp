@@ -1,0 +1,51 @@
+############################
+# Global ignores
+############################
+.DS_Store
+Thumbs.db
+*.log
+
+############################
+# Environment files
+############################
+.env
+*.env.local
+main/.env
+
+############################
+# Python / FastAPI backend
+############################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.pytype/
+.ruff_cache/
+.coverage*
+coverage.xml
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+############################
+# Node / Vite frontend
+############################
+frontend/mongo_mcp_frontend/node_modules/
+frontend/mongo_mcp_frontend/dist/
+frontend/mongo_mcp_frontend/.vite/
+
+############################
+# IDE / Editor metadata
+############################
+.idea/
+.vscode/
+*.swp

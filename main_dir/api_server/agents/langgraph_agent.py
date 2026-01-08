@@ -7,45 +7,51 @@ import asyncio
 import os
 from typing import Dict, Any, List, Optional
 from langchain_mcp_adapters.client import MultiServerMCPClient
-from langchain_anthropic import ChatAnthropic
-from langchain.agents import create_agent
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langgraph.prebuilt import create_react_agent
 from langchain_core.messages import HumanMessage, AIMessage
+
+# import asyncio
+# import os
+# from typing import Dict, Any, List, Optional
+# from langchain_mcp_adapters.client import MultiServerMCPClient
+# from langchain_anthropic import ChatAnthropic
+# from langchain.agents import create_agent
+# from langchain_core.messages import HumanMessage, AIMessage
 
 # Load environment variables
 from dotenv import load_dotenv
 load_dotenv()
 
 class MongoDBAnalyticsAgent:
-    """LangGraph agent that uses MongoDB MCP tools via Groq"""
+    """LangGraph agent that uses MongoDB MCP tools via Gemini"""
     
-    def __init__(self, anthropic_api_key: Optional[str] = None, mcp_server_url: str = "http://localhost:8000/mcp"):
-        self.anthropic_api_key = anthropic_api_key or os.getenv("ANTHROPIC_API_KEY")
+    def __init__(self, google_api_key: Optional[str] = None, mcp_server_url: str = "http://localhost:8000/mcp"):
+        # --- CHANGED: Use GOOGLE_API_KEY ---
+        self.google_api_key = google_api_key or os.getenv("GOOGLE_API_KEY")
         self.mcp_server_url = mcp_server_url
         
-        if not self.anthropic_api_key:
-            raise ValueError("ANTHROPIC_API_KEY not found. Set it in environment or pass as parameter")
+        if not self.google_api_key:
+            raise ValueError("GOOGLE_API_KEY not found. Set it in environment or pass as parameter")
         
-        # Set API key in environment for ChatAnthropic
-        os.environ["ANTHROPIC_API_KEY"] = self.anthropic_api_key
-        
-        # Initialize Anthropic model for tool calling
-        self.model = ChatAnthropic(
-            model_name="claude-sonnet-4-5-20250929",  # Claude Sonnet 4.5 model
-            temperature=0,
-            max_tokens_to_sample=2000,
-            timeout=60,
-            stop=[]
+        # --- CHANGED: Initialize Gemini 3 Model ---
+        # Gemini 3 Pro/Flash support thinking_level for better reasoning
+        self.model = ChatGoogleGenerativeAI(
+            model="gemini-3-flash-preview", 
+            google_api_key=self.google_api_key,
+            temperature=1.0,  # Gemini 3 reasoning models perform best at 1.0
+            max_output_tokens=2048,
+            # thinking_level="high"  # Optional: Enable for complex multi-step analysis
         )
         
         self.client = None
         self.tools = None
         self.agent = None
-    
+
     async def initialize(self):
         """Initialize MCP client and load tools"""
         try:
-            print("🔄 Initializing MCP client...")
-            # Setup MCP client to connect to our MongoDB server
+            print(f"🔄 Connecting to MCP server at {self.mcp_server_url}...")
             self.client = MultiServerMCPClient(
                 {
                     "mongodb": {
@@ -55,9 +61,21 @@ class MongoDBAnalyticsAgent:
                 }
             )
             
-            print("🔄 Getting available tools...")
-            # Get available tools from MCP server
-            self.tools = await self.client.get_tools()
+            # Add retry logic for getting tools (MCP server might be slow to start)
+            max_retries = 5
+            retry_delay = 2
+            for attempt in range(max_retries):
+                try:
+                    print(f"🔄 Getting available tools from MCP (Attempt {attempt + 1}/{max_retries})...")
+                    self.tools = await self.client.get_tools()
+                    break
+                except Exception as e:
+                    if attempt < max_retries - 1:
+                        print(f"⚠️ Failed to get tools: {e}. Retrying in {retry_delay}s...")
+                        await asyncio.sleep(retry_delay)
+                    else:
+                        print(f"❌ Final attempt to get tools failed: {e}")
+                        raise e
             print(f"✅ Connected to MCP server. Found {len(self.tools)} tools:")
             for tool in self.tools:
                 print(f"   📧 {tool.name}: {tool.description}")
@@ -78,7 +96,7 @@ IMPORTANT DATA HANDLING RULES:
 1. ALWAYS check data availability first using get_data_date_range() when users ask about date-based queries or trends
 2. Use the actual date ranges returned by get_data_date_range() for subsequent queries
 3. If user asks about "last month" or relative dates, first check what data is available, then calculate appropriate dates
-4. When calling tools, use proper JSON format for parameters. Always include required parameters.
+4. When calling tools, ALWAYS pass parameters as structured objects (dictionaries). NEVER pass a string for a parameter that expects a JSON object (like 'query' in mongodb_query).
 5. ONLY generate charts when user explicitly asks for charts, graphs, or visualizations
 6. For simple questions about counts, totals, or data analysis, provide text responses without charts
 
@@ -100,10 +118,11 @@ Examples of correct tool calls:
 
 Use the available tools to answer questions about the hotel data. When asked about revenue, use revenue analytics tools. For customer questions, use customer insight tools. For simple data questions, provide direct answers without visualization unless explicitly requested. ALWAYS check data availability before making date-based queries."""
 
-            self.agent = create_agent(
+            self.agent = create_react_agent(
                 model=self.model,
                 tools=self.tools,
-                system_prompt=system_prompt
+                # --- CHANGED: use prompt instead of state_modifier ---
+                prompt=system_prompt,
             )
             
             print("✅ Agent created successfully!")
