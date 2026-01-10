@@ -1,3 +1,11 @@
+import asyncio
+import sys
+
+if sys.platform.startswith("win"):
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
+
+
 #!/usr/bin/env python3
 """
 MongoDB Analytics Agent - Main Entry Point
@@ -30,11 +38,11 @@ async def main():
     try:
         # Start MCP server first
         mcp_process = start_mcp_server()
-        await asyncio.sleep(2)  # Give MCP server time to start
+        await asyncio.sleep(5)  # Increased sleep time to 5 seconds
         
         # Start FastAPI server
         api_process = start_fastapi_server()
-        await asyncio.sleep(2)  # Give FastAPI server time to start
+        await asyncio.sleep(3)  # Increased sleep time
         
         print("✅ System started successfully!")
         print("📊 MCP Server: http://localhost:8000")

@@ -1,0 +1,28 @@
+# Core MCP + LangGraph stack
+mcp==1.24.0
+langchain-mcp-adapters==0.2.1
+fastmcp>=0.1.0
+langgraph==0.2.57
+
+# LangChain ecosystem
+langchain==0.3.13
+langchain-anthropic==0.3.3
+langchain-openai==0.2.13
+langchain-groq==1.1.1
+
+# API + server
+fastapi==0.115.6
+uvicorn==0.32.1
+
+# Data + validation
+pydantic==2.12.5
+typing-extensions>=4.14.0
+pymongo==4.8.0
+pandas==2.2.3
+matplotlib==3.9.3
+seaborn==0.13.2
+python-dotenv==1.0.1
+
+# Networking / utilities
+httpx==0.28.1
+requests==2.32.3
